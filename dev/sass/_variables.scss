@@ -1,4 +1,17 @@
-$mainColor: #333;
-$fontFamily: Helvetica, Arial, sans-serif;
-$linkColor: #699;
-$bgColor: #f8f8f8;
+@font-face {
+	font-family: 'cedra_4fwide';
+	src: url('../fonts/cedra4f-wide.woff2') format('woff2'),
+		 url('../fonts/cedra4f-wide.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'cedra_4fwide';
+	src: url('../fonts/cedra4f-widelight.woff2') format('woff2'),
+		 url('../fonts/cedra4f-widelight.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+$os: 'Open Sans', sans-serif;
+$cw: 'cedra_4fwide', sans-serif;
