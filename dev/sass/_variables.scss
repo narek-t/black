@@ -1,3 +1,6 @@
+$os: 'Open Sans', sans-serif;
+$cw: 'cedra_4fwide', sans-serif;
+
 @font-face {
 	font-family: 'cedra_4fwide';
 	src: url('../fonts/cedra4f-wide.woff2') format('woff2'),
@@ -13,5 +16,23 @@
 	font-style: normal;
 }
 
-$os: 'Open Sans', sans-serif;
-$cw: 'cedra_4fwide', sans-serif;
+.btn {
+	width: 140px;
+	height: 45px;
+	background-color: #ee0d17;
+	border: 1px solid #ee0d17;
+	border-radius: 1px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), inset 0 2px 0 rgba(255, 255, 255, 0.15);
+	display: block;
+	margin: auto;
+	font: 400 14px/43px $os;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .3s ease-in-out;
+	&:hover {
+		background: #ba070f;
+	}
+}
+
+

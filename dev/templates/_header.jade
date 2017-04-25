@@ -3,7 +3,10 @@ block header
 	header.site-header
 		.site-header__inner.cf
 			a.logo(href="#")
-				img(src="img/home-logo.png", alt="")
+				if bodyClass == 'home'
+					img(src="img/home-logo.png", alt="")
+				else
+					img(src="img/logo.png", alt="")
 			.menu-side
 				ul.main-menu
 					li
