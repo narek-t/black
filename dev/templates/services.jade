@@ -1,0 +1,29 @@
+extends _layout
+block vars
+	- var bodyClass = 'services'
+block content
+	main.main-content
+		.main-content__inner
+			.services__list
+				.services__list-item
+					.services__list-item__img(style="background-image: url(img/s1.jpg)")
+					.services__list-item__inner
+						span.title Стыковка конвейерной <br> ленты
+						a.btn(href="#") Подробнее
+				.services__list-item
+					.services__list-item__img(style="background-image: url(img/s2.jpg)")
+					.services__list-item__inner
+						span.title Установка <br>гофроборта
+						a.btn(href="#") Подробнее
+				.services__list-item
+					.services__list-item__img(style="background-image: url(img/s3.jpg)")
+					.services__list-item__inner
+						span.title Логистика
+						a.btn(href="#") Подробнее
+
+
+
+
+
+
+block inlineScripts
