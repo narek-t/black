@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;amp;subset=cyrillic"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>Document</title>
+  </head>
+  <body class="ref">
+    <div class="all-wrapper">
+      <header class="site-header">
+        <div class="site-header__inner cf"><a href="#" class="logo"><img src="img/logo.png" alt=""/></a>
+          <div class="menu-side">
+            <ul class="main-menu">
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Продукция</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Референц</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul><a href="tel:+74951204019" class="tel">+7 495 120-40-19 </a>
+          </div>
+        </div>
+      </header>
+      <main class="main-content">
+        <div class="main-content__inner">
+          <div class="map-wrapper">
+            <div id="map"></div>
+            <div class="map__bottom">
+              <div class="map__bottom-col">
+                <p class="title">ООО «Резистенз групп»</p>
+                <ul>
+                  <li>Россия, 142116, г.  Подольск, ул. Лобачева, 13, оф. 207, </li>
+                  <li>тел.:  <a href="tel:+74951204019">+7 (495) 120-40-19</a></li>
+                  <li> <a href="mailto:info@resistenz.ru">info@resistenz.ru</a></li>
+                </ul>
+              </div>
+              <div class="map__bottom-col">
+                <p class="title">Реквизиты компании:</p>
+                <ul class="org">
+                  <li>ИНН/КПП 5036165799/503601001</li>
+                  <li>ОГРН 1175074003686</li>
+                  <li>PC 40702810100000079222</li>
+                  <li>КС 30101810400000000555</li>
+                  <li>ОБИК 044525555</li>
+                  <li>ПАО «ПРОМСВЯЗЬБАНК»</li>
+                </ul>
+              </div>
+            </div>
+            <div class="map__form">
+              <div class="map__form--heading"><span class="title">Закажите консультацию специалиста</span></div>
+              <div class="map__form--body cf">
+                <form>
+                  <input type="text" placeholder="Имя"/>
+                  <input type="tel" placeholder="Телефон"/>
+                  <input type="email" placeholder="Email"/>
+                  <textarea placeholder="Сообщение"></textarea>
+                  <input type="submit" value="Отправить" class="btn"/>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer__inner cf">
+          <p class="copyright">©2017 Резистенз Групп</p>
+          <p class="madein">Разработка сайта: <a href="http://belugalab.ru" target="_blank">Belugalabs</a></p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcMn3OOK5FKS00VDgAHu7gDeW1gqoQdmo"></script>
+    <script src="js/lib/lib.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script>
+      function initMap() {
+      	var uluru = {lat: 55.437487, lng: 37.572316};
+      	var map = new google.maps.Map(document.getElementById('map'), {
+      		zoom: 14,
+      		center: uluru
+      	});
+      	var marker = new google.maps.Marker({
+      		position: uluru,
+      		map: map
+      	});
+      	google.maps.event.addDomListener(window, "resize", function() {
+      		var center = map.getCenter();
+      		google.maps.event.trigger(map, "resize");
+      		map.setCenter(center); 
+      	});
+      }
+      initMap()
+    </script>
+  </body>
+</html>

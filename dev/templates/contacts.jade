@@ -1,0 +1,58 @@
+extends _layout
+block vars
+	- var bodyClass = 'ref'
+block content
+	main.main-content
+		.main-content__inner
+			.map-wrapper
+				#map
+				.map__bottom
+					.map__bottom-col
+						p.title ООО «Резистенз групп»
+						ul
+							li Россия, 142116, г.  Подольск, ул. Лобачева, 13, оф. 207, 
+							li тел.:  
+								a(href="tel:+74951204019") +7 (495) 120-40-19
+							li 
+								a(href="mailto:info@resistenz.ru") info@resistenz.ru
+					.map__bottom-col
+						p.title Реквизиты компании:
+						ul.org
+							li ИНН/КПП 5036165799/503601001
+							li ОГРН 1175074003686
+							li PC 40702810100000079222
+							li КС 30101810400000000555
+							li ОБИК 044525555
+							li ПАО «ПРОМСВЯЗЬБАНК»
+				.map__form
+					.map__form--heading
+						span.title Закажите консультацию специалиста
+					.map__form--body.cf
+						form
+							input(type="text" placeholder="Имя")
+							input(type="tel" placeholder="Телефон")
+							input(type="email" placeholder="Email")
+							textarea(placeholder="Сообщение")
+							input.btn(type="submit" value="Отправить")
+
+
+
+block inlineScripts
+	script.
+		function initMap() {
+			var uluru = {lat: 55.437487, lng: 37.572316};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 14,
+				center: uluru
+			});
+			var marker = new google.maps.Marker({
+				position: uluru,
+				map: map
+			});
+			google.maps.event.addDomListener(window, "resize", function() {
+				var center = map.getCenter();
+				google.maps.event.trigger(map, "resize");
+				map.setCenter(center); 
+			});
+		}
+		initMap()
