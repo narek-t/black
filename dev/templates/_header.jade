@@ -11,8 +11,15 @@ block header
 				ul.main-menu
 					li
 						a(href="#") О нас
-					li
+					li.menu-item-has-children
 						a(href="#") Продукция
+						ul.sub-menu
+							li
+								a(href="#") Продукт 1
+							li
+								a(href="#") Продукт 2
+							li
+								a(href="#") Продукт 3
 					li
 						a(href="#") Услуги
 					li
@@ -21,4 +28,6 @@ block header
 						a(href="#") Референц
 					li
 						a(href="#") Контакты
-				a.tel(href="tel:+74951204019") +7 495 120-40-19 
+				.tel-side
+					a.tel(href="tel:+74951204019") +7 495 120-40-19 
+					span.graph график работы: пн-пт,  9.00-18.00
