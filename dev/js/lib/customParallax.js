@@ -63,15 +63,19 @@ function scrollToSlide(slideIndex) {
   previousItem()
 }
 
-$('.asd').click(function(event) {
+$('.js--scrollto').click(function(event) {
   event.preventDefault();
-  scrollToSlide(0);
+  var id = $(this).data('src');
+  scrollToSlide(id);
 
 });
 
 // ------------- ADD EVENT LISTENER ------------- //
 var mousewheelEvent = isFirefox ? "DOMMouseScroll" : "wheel";
-window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
+if($('body').hasClass('home')) {
+  window.addEventListener(mousewheelEvent, _.throttle(parallaxScroll, 60), false);
+}
+
 
 // ------------- SLIDE MOTION ------------- //
 function nextItem() {
@@ -85,7 +89,7 @@ function nextItem() {
 
   $(".parallax-section").removeClass('current__slide');
   $(".parallax-section").eq(currentSlideNumber).addClass('current__slide');
-  $(".parallax-section").eq(currentSlideNumber).find('.animate-init').addClass('animated');
+  // $(".parallax-section").eq(currentSlideNumber).find('.animate-init').addClass('animated');
 
 
 }
@@ -103,6 +107,6 @@ function previousItem() {
 
   $(".parallax-section").removeClass('current__slide');
   $(".parallax-section").eq(currentSlideNumber).addClass('current__slide');
-  $(".parallax-section").eq(currentSlideNumber).find('.animate-init').addClass('animated');
+  // $(".parallax-section").eq(currentSlideNumber).find('.animate-init').addClass('animated');
 
 }
