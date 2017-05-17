@@ -83,8 +83,10 @@ function nextItem() {
   $previousSlide.removeClass("up-scroll").addClass("down-scroll");
   if(currentSlideNumber == 0) {
     $('body').addClass('black__header');
+    $('.up-arrow').removeClass('visible');
   }else {
     $('body').removeClass('black__header');
+    $('.up-arrow').addClass('visible');
   }
 
   $(".parallax-section").removeClass('current__slide');
@@ -100,8 +102,10 @@ function previousItem() {
   
   if(currentSlideNumber == 0) {
     $('body').addClass('black__header');
+    $('.up-arrow').removeClass('visible');
   }else {
     $('body').removeClass('black__header');
+    $('.up-arrow').addClass('visible');
   }
 
 

@@ -2,7 +2,8 @@ block header
 
 	header.site-header
 		.site-header__inner.cf
-			a.logo(href="#")
+			a.up-arrow.js--scrollto(href="#" data-src="0") Наверх
+			a.logo.js--scrollto(href="#" data-src="0")
 				if bodyClass == 'home'
 					img(src="img/home-logo.png", alt="")
 				else
